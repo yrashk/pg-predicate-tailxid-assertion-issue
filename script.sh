@@ -6,7 +6,7 @@ PORT=65432
 
 if [[ ! -f ".ready" ]]; then
   # Install Rust
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-update-default-toolchain
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
   . "$HOME/.cargo/env"
 
   # Postgres
