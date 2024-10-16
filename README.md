@@ -34,6 +34,8 @@ Sometimes, more than one may be required.
 
 Can you please verify if this is true and open an issue with your results?
 
+So far, I was only able to reproduce this on macOS, but quite consistently.
+
 # How to build Postgres with assertions enabled?
 
 This is how it has to be configured:
