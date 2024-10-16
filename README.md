@@ -36,6 +36,8 @@ Can you please verify if this is true and open an issue with your results?
 
 So far, I was only able to reproduce this on macOS, but quite consistently.
 
+You can use `script.sh` in this repo to run the test (be aware that'll install Rust on you)
+
 # How to build Postgres with assertions enabled?
 
 This is how it has to be configured:
