@@ -21,6 +21,12 @@ async fn main() {
     {
         let client = pool.get().await.unwrap();
         _ = client.execute("create table if not exists tab (i int)", &[]).await.unwrap();
+        let res = client.query("select current_setting('debug_assertions')", &[]).await.unwrap();
+        let debug_assetions = res.first().unwrap().get::<_, &str>(0);
+        if debug_assetions != "on" {
+            println!("debug_assertions are not enabled (current_setting('debug_assertions') = {debug_assetions})");
+            return;
+        }
     }
 
     for batch in (0..100_000).step_by(BATCH_SIZE) {
