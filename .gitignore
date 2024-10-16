@@ -1,1 +1,6 @@
 target
+.ready
+.rustup
+postgres
+logfile
+db
