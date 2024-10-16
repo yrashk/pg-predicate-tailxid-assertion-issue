@@ -29,7 +29,7 @@ async fn main() {
         }
     }
 
-    for batch in (0..100_000).step_by(BATCH_SIZE) {
+    for batch in (0..1000_0000).step_by(BATCH_SIZE) {
         let tasks: Vec<_> = (0..10_000)
             .map(|i| {
                 let pool = pool.clone();
